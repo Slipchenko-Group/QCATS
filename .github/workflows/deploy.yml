@@ -34,7 +34,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install sphinx myst-parser pydata-sphinx-theme sphinx-design
+          pip install sphinx myst-parser pydata-sphinx-theme sphinx-design sphinxcontrib-bibtex
 
       - name: Setup Pages Artifact Properties
         uses: actions/configure-pages@v5
