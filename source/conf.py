@@ -96,6 +96,7 @@ html_theme_options = {
 # Add any paths that contain custom static files (such as images, custom CSS) here.
 html_static_path = ['_static']
 html_css_files = ['custom.css']
+html_baseurl = 'https://slipchenko-group.github.io/QCATS/'
 
 # Set the master document (usually index.rst or index.md)
 master_doc = 'index'

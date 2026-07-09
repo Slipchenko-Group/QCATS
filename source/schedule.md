@@ -25,5 +25,5 @@ The symposium will span three days of invited talks, panel discussions, and  soc
 ### Day 3: Friday, May 21
 
 * **AM** | **Morning Session: Invited Talks**
-* **PM** | **Science & Scoiety session**
+* **PM** | **Science & Society session**
 * **evening** | **Symposium Banquet Dinner**
