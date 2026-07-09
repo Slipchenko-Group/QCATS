@@ -1,0 +1,27 @@
+
+/* ==========================================================================
+   LIGHT THEME COLOR OVERRIDES
+   ========================================================================== */
+html[data-theme="light"] {
+  /* Brand Colors */
+  --pst-color-primary: #002F6C;           /* Rich blue for links, buttons, and text highlights */
+  --pst-color-brand: #002F6C;             /* Primary branding color */
+  
+  /* Top Header Navigation Bar */
+  --pst-color-navbar-background: #002F6C; /* Gives the light theme a bold, solid colored header bar */
+  --pst-color-navbar-link: #ffffff;       /* Makes header navigation links crisp white */
+  --pst-color-navbar-link-hover: #e0e0e0; /* Subtle hover color change for header links */
+  
+  /* Backgrounds and Accents */
+  --pst-color-background: #f8f9fa;       /* Light off-white background for the page body */
+  --pst-color-surface: #ffffff;          /* Pure white for content cards and panels */
+  --pst-color-border: #dcdcdc;           /* Defined, crisp borders instead of pale ones */
+}
+
+/* ==========================================================================
+   DARK THEME COLOR OVERRIDES (Keeps your working dark mode pristine)
+   ========================================================================== */
+html[data-theme="dark"] {
+  /* You can adjust dark mode specific variables here if needed, 
+     otherwise it will fall back to its excellent defaults */
+}

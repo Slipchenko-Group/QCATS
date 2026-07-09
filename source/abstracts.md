@@ -1,0 +1,11 @@
+# Abstract Submission
+
+The abstract submission portal for oral contributions and poster 
+session **will open soon**.
+
+:::{note}
+We welcome submissions reflecting themes relevant to Professor Anna Krylov's 
+pioneering career, including electronic structure of electronic excited states, 
+resonances, spin chemistry, software development, and more!
+:::
+
