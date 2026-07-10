@@ -1,29 +1,47 @@
-# Program Schedule
+# Tentative program
 
-The symposium will span three days of invited talks, panel discussions, and  social events. 
+```{figure} _static/images/Sch_cat1.png
+:width: 40%
+:align: center
+:alt: Schrodinger cat
+```
 
-*Note: A detailed timetable with talk titles and speakers will be posted closer to the event.*
+## Day 1: Wednesday, May 19
 
----
+* Opening remarks
+* Technical talks
+* Lunch 
+* Poster session
+* Welcome reception
 
-### Day 1: Wednesday, May 19
+```{figure} _static/images/Sch_cat2.png
+:width: 40%
+:align: center
+:alt: Schrodinger cat
+```
 
-* **AM** | **Morning Session: Opening Remarks & Invited Talks**
-* **PM** | **Afternoon Session: Invited Talks**
-* **evening** | **Welcome Reception & Poster Session**
+## Day 2: Thursday, May 20
 
----
+* Technical talks
+* Lunch 
+* Technical talks
 
-### Day 2: Thursday, May 20
+```{figure} _static/images/Sch_cat3.png
+:width: 40%
+:align: center
+:alt: Schrodinger cat
+```
 
-* **AM** | **Morning Session: Invited Talks**
-* **PM** | **Afternoon Session: Invited Talks**
-* **evening** | **Informal Socializing**
+## Day 3: Friday, May 21
 
----
+* Technical talks
+* Lunch
+* Science and society panel discussions
+* Reception
+* Dinner
 
-### Day 3: Friday, May 21
-
-* **AM** | **Morning Session: Invited Talks**
-* **PM** | **Science & Scoiety session**
-* **evening** | **Symposium Banquet Dinner**
+```{figure} _static/images/Sch_cat4.png
+:width: 40%
+:align: center
+:alt: Schrodinger cat
+```

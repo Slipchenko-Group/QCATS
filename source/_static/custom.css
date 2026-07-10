@@ -25,3 +25,33 @@ html[data-theme="dark"] {
   /* You can adjust dark mode specific variables here if needed, 
      otherwise it will fall back to its excellent defaults */
 }
+
+/* ==========================================================================
+   UNIVERSAL GRAPHICS CONSISTENCY
+   ========================================================================== */
+
+/* Automatically style all standalone figures on the site */
+.figure {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 10px;
+  background-color: var(--pst-color-surface);
+  border: 1px solid var(--pst-color-border);
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Ensure all figure captions look identical (subtle, centered, italicized) */
+.caption {
+  font-size: 0.9rem;
+  color: var(--pst-color-text-muted);
+  font-style: italic;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+/* Give grid images (like speaker headshots) a clean, uniform look */
+.sd-card img {
+  object-fit: cover; /* Prevents stretching if photos have slight scale variances */
+  height: 250px;     /* Forces all profile cards to have matching image heights */
+}

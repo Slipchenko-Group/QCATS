@@ -1,6 +1,10 @@
 # Photo Gallery
 
-This space will serve as an art and photo gallery for the symposium. 
+```{figure} _static/images/random_cats.png
+:width: 60%
+:align: center
+:alt: random_cats
+```
 
 ::::{note}
 *If you have historical lab photos, group pictures from past conferences, 
