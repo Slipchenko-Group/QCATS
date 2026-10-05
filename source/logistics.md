@@ -1,3 +1,5 @@
+:notoc: true
+
 # Venue & Logistics
 
 The symposium will be hosted on-site at the USC campus. 

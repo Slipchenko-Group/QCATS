@@ -1,8 +1,10 @@
+:notoc: true
+
 # Photo Gallery
 
 ```{figure} _static/images/random_cats.png
-:width: 60%
-:align: center
+:width: 40%
+:align: left
 :alt: random_cats
 ```
 

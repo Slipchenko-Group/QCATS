@@ -1,57 +1,387 @@
-
 /* ==========================================================================
-   LIGHT THEME COLOR OVERRIDES
+   COLOR PALETTE DEFINITIONS (Alpine Forest & Slate)
    ========================================================================== */
-html[data-theme="light"] {
-  /* Brand Colors */
-  --pst-color-primary: #002F6C;           /* Rich blue for links, buttons, and text highlights */
-  --pst-color-brand: #002F6C;             /* Primary branding color */
-  
-  /* Top Header Navigation Bar */
-  --pst-color-navbar-background: #002F6C; /* Gives the light theme a bold, solid colored header bar */
-  --pst-color-navbar-link: #ffffff;       /* Makes header navigation links crisp white */
-  --pst-color-navbar-link-hover: #e0e0e0; /* Subtle hover color change for header links */
-  
-  /* Backgrounds and Accents */
-  --pst-color-background: #f8f9fa;       /* Light off-white background for the page body */
-  --pst-color-surface: #ffffff;          /* Pure white for content cards and panels */
-  --pst-color-border: #dcdcdc;           /* Defined, crisp borders instead of pale ones */
+:root {
+    --primary-forest:  #1E3F20;  /* Deep Alpine Pine Forest */
+    --misty-mint:      #F0F4F1;  /* Pale Misty Mint (Sidebar / Layout panels) */
+    --cedar-wood:      #A07855;  /* Cedar Wood (Accent Lines & Highlights) */
+    --dark-juniper:    #1A2421;  /* Midnight Juniper Shadow (Footer Panel) */
+    --canvas-base:     #F8F9FA;  /* Very Light Gray (Webpage Canvas Base) */
 }
 
 /* ==========================================================================
-   DARK THEME COLOR OVERRIDES (Keeps your working dark mode pristine)
+   WEBPAGE BASE CANVAS BACKGROUND
    ========================================================================== */
-html[data-theme="dark"] {
-  /* You can adjust dark mode specific variables here if needed, 
-     otherwise it will fall back to its excellent defaults */
+body, 
+main, 
+div.sphinxawesome-container, 
+.sphinxawesome-content {
+    background-color: var(--canvas-base) !important;
 }
 
 /* ==========================================================================
-   UNIVERSAL GRAPHICS CONSISTENCY
+   CUSTOM HEADER BACKGROUND GRAPHIC (FIXED SINGLE BANNER)
+   ========================================================================== */
+header {
+    background-image: url("cat_banner.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    /* Increases banner height proportionally */
+    padding-top: 1.5rem !important;  
+    padding-bottom: 1.5rem !important; 
+
+}
+
+/* Force all internal nested header items to be perfectly see-through */
+header div,
+header > div,
+.sphinxawesome-header-content,
+.sphinxawesome-header {
+    background-image: none !important;
+    background-color: transparent !important;
+}
+
+/* Keep header links, brand text, and vector icons readable over your graphic */
+header a,
+header span,
+header div,
+header p,
+header svg {
+    color: #ffffff !important;
+    fill: #ffffff !important; 
+}
+
+header a:hover {
+    color: var(--cedar-wood) !important; 
+}
+
+/* Fix text readability by casting a crisp drop-shadow behind the logo/brand link */
+header a,
+header span,
+.sphinxawesome-header-content a,
+.sphinxawesome-header-content span {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 
+                 0 4px 12px rgba(0, 0, 0, 0.5) !important; /* Forces the text out over busy graphics */
+}
+
+
+/* ==========================================================================
+   1. GLOBAL CANVAS BASE (NO CONTENT BLEED)
+   ========================================================================== */
+/* Reset the central reading layout to your light gray base so reading text is clear */
+body, 
+div.page,
+main,
+main.sphinxawesome-main,
+div.sphinxawesome-content,
+article,
+div.prose {
+    background-color: var(--canvas-base) !important;
+}
+
+/* Ensure clean margin breathing room for reading documents */
+main.sphinxawesome-main {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+}
+
+/* ==========================================================================
+   2. LEFT SIDEBAR PANEL (FIXED SEAMLESS PANEL & VISIBLE TEXT)
+   ========================================================================= */
+/* Target all nested containers on the left side to match your theme color */
+aside,
+.sphinxawesome-sidebar,
+.sphinxawesome-sidebar-wrapper,
+div[data-at-sidebar="container"],
+aside div {
+    background-color: var(--misty-mint) !important;
+}
+
+aside,
+.sphinxawesome-sidebar,
+div[data-at-sidebar="container"] {
+    /* Clear out the problematic margins and paddings that hid your text */
+    margin-left: 0 !important;
+    padding-left: 5px !important; 
+    padding-right: 1.5rem !important;
+    padding-top: 2rem !important;
+    
+    /* THE FIX: Casts a solid green block to the left, flooding the white space safely */
+    box-shadow: -1000px 0 0 1000px var(--misty-mint) !important;
+    
+    /* Adds a thin vertical line exactly where the green pane meets the reading pane */
+    border-right: 1px solid rgba(30, 63, 32, 0.12) !important;
+}
+
+/* Clear sub-list background stack overlays from the inner menus */
+nav[aria-label="Main navigation"],
+nav[aria-label="Main navigation"] ul,
+.sphinxawesome-sidebar nav,
+nav[aria-label="Main navigation"] li {
+    background-color: transparent !important; 
+}
+
+/* ==========================================================================
+   3. SIDEBAR NAVIGATION LINKS
+   ========================================================================== */
+aside a,
+.sphinxawesome-sidebar a,
+nav[aria-label="Main navigation"] span,
+nav[aria-label="Main navigation"] p {
+    color: var(--primary-forest) !important; 
+    font-size: 16px !important;
+    display: block !important;
+    padding: 0.5rem 0.75rem !important;
+}
+
+/* Custom Cedar Wood Active Tab Box styling */
+aside a:hover,
+.sphinxawesome-sidebar a:hover,
+nav[aria-label="Main navigation"] .current > a,
+nav[aria-label="Main navigation"] a[aria-current="page"],
+nav[aria-label="Main navigation"] li[data-at-active="true"] a {
+    color: #ffffff !important;                   
+    background-color: var(--cedar-wood) !important; 
+    font-weight: 600 !important;
+    border-radius: 6px !important;               
+}
+
+
+/* ==========================================================================
+   MAIN DOCUMENT CONTAINER & BORDER SEPARATION
+   ========================================================================== */
+/* 
+   Isolate the reading panels and add a thin vertical border line 
+   separating the content area from the sidebar layout.
+*/
+main,
+main.sphinxawesome-main,
+div.sphinxawesome-content,
+article,
+div.prose {
+    background-color: var(--canvas-base) !important;
+}
+
+/* Adds a subtle gray-green dividing line down the middle of the webpage grid */
+main.sphinxawesome-main {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+    border-left: 1px solid rgba(30, 63, 32, 0.15) !important; 
+}
+
+
+/* ==========================================================================
+   BOTTOM FOOTER CUSTOM PANEL COLOR (FIXED FOOTER DISPLACEMENT)
+   ========================================================================= */
+/* Target the main footer tag and all its inner content blocks */
+footer, 
+.sphinxawesome-footer,
+footer div {
+    background-color: var(--dark-juniper) !important; 
+}
+
+footer {
+    border-top: 3px solid var(--cedar-wood) !important;
+    padding-top: 0.8rem !important;   
+    padding-bottom: 0.8rem !important;
+    margin-top: 2rem !important;
+    
+    /* THE LIFT FIX: Forces the footer to render ON TOP of the sidebar shadow */
+    position: relative !important;
+    z-index: 50 !important;
+}
+
+/* Force inner theme wrappers inside the footer to shrink their extra spacing */
+footer .sphinxawesome-footer-content,
+footer div.flex,
+footer div.container {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+/* 
+   THE SHIFT FIX: Explicitly targets the container holding the text 
+   and nudges it to the right so it aligns with the main reading window.
+*/
+footer div.flex,
+footer p,
+footer span,
+footer a {
+    color: #ffffff !important;
+    font-size: 14px !important;
+    
+    /* Aligns the footer text neatly where your text content starts */
+    padding-left: 2.5rem !important; 
+}
+
+
+
+
+/* ==========================================================================
+   SEARCH DISMISSAL (STRICT OVERRIDES)
+   ========================================================================== */
+button[data-at-search="btn"],
+button[aria-label="Search"],
+button[aria-label="Open search"],
+.sphinxawesome-header button:has(.fa-search),
+header button:has(svg):not([aria-label*="theme"]):not([aria-label*="mode"]) {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+div[data-at-search="container"],
+.sphinxawesome-search,
+.search-button,
+#searchbox {
+    display: none !important;
+}
+
+.sphinxawesome-header-content {
+    justify-content: flex-end !important;
+}
+
+/* ==========================================================================
+   MAIN ARTICLE TYPOGRAPHY (STRICT MYST MARKDOWN LIST FIX)
+   ========================================================================== */
+html, body, div.sphinxawesome-content, article {
+    font-size: 19px !important;
+}
+
+/* Enforce general typography parameters on standard text */
+.sphinxawesome-content p,
+.sphinxawesome-content span,
+article p {
+    font-size: 19px !important;
+    line-height: 1.8 !important;
+}
+
+/* 
+   THE MARKDOWN LIST TIGHTENING FIX:
+   Targets list nodes, list text paragraphs, and nested extension boxes.
+*/
+article ul, article ol,
+.sphinxawesome-content ul, .sphinxawesome-content ol,
+ul.simple, ol.simple {
+    margin-top: 8px !important;
+    margin-bottom: 0.4rem !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/* Hard-override individual bullet entries and the paragraphs nested inside them */
+article li, .sphinxawesome-content li,
+article li p, .sphinxawesome-content li p,
+ul.simple li, ul.simple li p {
+    font-size: 19px !important;
+    line-height: 1.4 !important;      /* Tighter text wrapping inside long bullet lines */
+    margin-top: 8px !important;   /* Pulls the items vertically closer together */
+    margin-bottom: 0.15rem !important;/* Pulls the items vertically closer together */
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/* Proportionately upscale heading profiles */
+.sphinxawesome-content h1, article h1 { font-size: 2.2rem !important; }
+.sphinxawesome-content h2, article h2 { font-size: 1.8rem !important; }
+.sphinxawesome-content h3, article h3 { font-size: 1.4rem !important; }
+
+/* Custom inline text highlights */
+.forest-highlight {
+    color: var(--primary-forest) !important;
+    font-weight: 600 !important;
+}
+
+.cedar-highlight {
+    color: var(--cedar-wood) !important;
+    font-weight: 700 !important;
+}
+
+/* ==========================================================================
+   CUSTOM HEADER HIGHLIGHTS & GRAPHICS
    ========================================================================== */
 
-/* Automatically style all standalone figures on the site */
-.figure {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 10px;
-  background-color: var(--pst-color-surface);
-  border: 1px solid var(--pst-color-border);
-  border-radius: 6px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+/* Style A: A full accent background box for the main page title (H1) */
+#custom-main-title {
+    background-color: var(--misty-mint) !important;
+    color: var(--primary-forest) !important;
+    padding: 1rem 1.5rem !important;
+    border-left: 6px solid var(--primary-forest) !important;
+    border-radius: 4px !important;
+    font-size: 2.6rem !important;
+    margin-bottom: 2rem !important;
 }
 
-/* Ensure all figure captions look identical (subtle, centered, italicized) */
-.caption {
-  font-size: 0.9rem;
-  color: var(--pst-color-text-muted);
-  font-style: italic;
-  margin-top: 0.75rem;
-  text-align: center;
+/* ==========================================================================
+   STRICT OVERRIDE FOR ALL H2 HEADINGS IN SPHINXAWESOME_THEME
+   ========================================================================== */
+/* 
+   We target the header tags along with the layout wrappers and inner structural 
+   permalinks (a.headerlink) to lock the typography to your cedar color.
+*/
+article h2,
+.sphinxawesome-content h2,
+main h2,
+h2[id],
+h2.data-at-heading,
+article h2 span,
+article h2 a.headerlink {
+    color: #2E5A36 !important; /* <--- Change this to any hex code you want */
+    fill: #2E5A36 !important;  /* Ensures any vector/link icons match perfectly */
 }
 
-/* Give grid images (like speaker headshots) a clean, uniform look */
-.sd-card img {
-  object-fit: cover; /* Prevents stretching if photos have slight scale variances */
-  height: 250px;     /* Forces all profile cards to have matching image heights */
+/* 
+   Prevents hover transitions from defaulting back to the theme's original 
+   Tailwind colors when your mouse glides over the heading area.
+*/
+article h2 a:hover,
+.sphinxawesome-content h2 a:hover {
+    color: #2E5A36 !important;
+}
+
+/* Style C: Make a sub-section header look like a clean tag or badge (H3) */
+.forest-badge-header {
+    display: inline-block !important;
+    background-color: var(--primary-forest) !important;
+    color: #ffffff !important;
+    padding: 0.35rem 0.8rem !important;
+    border-radius: 20px !important; /* Capsule/pill shape */
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    margin-top: 1.5rem !important;
+}
+
+/* ==========================================================================
+   UNIVERSAL GRAPHICS & FIGURE CONSISTENCY
+   ========================================================================== */
+/* Styles the outer structural box around your image and caption */
+figure, .figure {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    padding: 12px !important;
+    background-color: var(--misty-mint) !important; /* Soft nature background card */
+    border: 1px solid rgba(30, 63, 32, 0.1) !important;
+    border-radius: 6px !important;
+    display: block !important;
+}
+
+/* Forces the inner image to render cleanly centered */
+figure img, .figure img {
+    margin: 0 auto !important;
+    border-radius: 4px !important;
+}
+
+/* Stylizes your caption description text underneath the picture */
+figcaption, .caption {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    color: var(--primary-forest) !important; /* Elegant dark forest green text */
+    font-style: italic !important;
+    margin-top: 0.8rem !important;
+    text-align: left !important;
 }

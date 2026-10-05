@@ -32,6 +32,8 @@ myst_enable_extensions = [
     "fieldlist",
     "html_admonition",
     "html_image",
+    "attrs_block",   # <--- ADD THIS ONE (Handles attributes placed ABOVE headers)
+    "attrs_inline",  # <--- ADD THIS ONE (Handles attributes placed INLINE with text)
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -45,53 +47,63 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # -- Options for HTML output -------------------------------------------------
 
 # Use the PyData Sphinx Theme for a clean, professional, non-manual academic portal look
-html_theme = 'pydata_sphinx_theme'
+#html_theme = 'pydata_sphinx_theme'
 #html_theme = 'shibuya'
+html_theme = 'sphinxawesome_theme'
+
 
 # Theme options are theme-specific and customize the look and feel of a theme.
-html_theme_options = {
-    # Top navbar brand text/logo settings
-    "logo": {
-        "text": "QCATS 2027",
-    },
+# html_theme_options = {
+#     # Top navbar brand text/logo settings
+#     "logo": {
+#         "text": "QCATS 2027",
+#     },
     
-    # Configure what shows up on the left sidebar.
-    # For a conference site, we often want to turn off the left sidebar on main pages 
-    # to give the speaker grid, tables, and photo gallery full page width.
-    #"page_sidebar_items": [],  # Removes secondary right-sidebar by default if empty
+#     # Footer customization
+#     "footer_start": ["copyright"],
+#     #"footer_end": ["theme-version"],
     
-    # Header navigation configuration
-    "header_links_before_dropdown": 6,  # Shows all your main pages directly in the top bar without collapsing
-    
-    # Optional: Add an announcement banner at the very top (e.g., registration reminders)
-    #"announcement": "✨ Registration is now open! Early bird deadline is approaching fast. ✨",
-    
-    # Icon links (e.g., to the hosting University department page or an organizing GitHub repo)
-    # "icon_links": [
-    #     {
-    #         "name": "Department Home",
-    #         "url": "https://www.purdue.edu/chemistry/",  # Replace with actual department/university URL
-    #         "icon": "fa-solid fa-university",
-    #         "type": "fontawesome",
-    #     }
-    # ],
-    
-    # Footer customization
-    "footer_start": ["copyright"],
-    #"footer_end": ["theme-version"],
-    
-    # # Color mode configuration (Light by default, but allows toggling)
-    # "light_css_variables": {
-    #     "color-brand-primary": "#002F6C",    # Customize this to match your institution's primary colors
-    #     "color-brand-content": "#002F6C",
-    # },
+#     # # Color mode configuration (Light by default, but allows toggling)
+#     # "light_css_variables": {
+#     #     "color-brand-primary": "#002F6C",    # Customize this to match your institution's primary colors
+#     #     "color-brand-content": "#002F6C",
+#     # },
 
-    # # Clean up the color variables using PyData's native primary/secondary controls:
-    # "colors": {
-    #     "primary": "navy",       # Try built-in color keywords first to test
-    #     "secondary": "indigo",
-    # },
+#     # # Clean up the color variables using PyData's native primary/secondary controls:
+#     # "colors": {
+#     #     "primary": "navy",       # Try built-in color keywords first to test
+#     #     "secondary": "indigo",
+#     # },
+    
+#     "disable_search": True,
+    
+#     # 1. Clean out the persistent section just in case
+#     "navbar_persistent": ["theme-switcher"], 
+    
+#     # 2. Check and explicitly define navbar sections to omit "search-button"
+#     "navbar_end": ["theme-switcher", "navbar-icon-links"],  # Ensure "search-button" is NOT here
+# }
+
+html_theme_options = {
+    # 1. Built-in Awesome Theme search control
+    #"disable_search": True,
+    
+    # 2. Header configuration (Cleaned up from block 1)
+    #"navbar_persistent": ["theme-switcher"], 
+    #"navbar_end": ["theme-switcher", "navbar-icon-links"], 
+    
+    # 3. Logo and layout configurations (From block 2)
+    #"logo": {
+    #    "text": "QCATS 2027",
+    #},
+    #"footer_start": ["copyright"],
 }
+
+    
+html_permalinks = False
+html_title = project
+html_short_title = project
+    
 
 # Add any paths that contain custom static files (such as images, custom CSS) here.
 html_static_path = ['_static']
