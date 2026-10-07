@@ -30,11 +30,11 @@ in physical  chemistry, including:
 *	Spin and chirality
 *	Synergy between experiment and theory
 
-In addition to technical sessions, the symposium will include [Science and Society session](SSS), co-sponsored by  [USC Open Dialogue Project](https://usc.edu/open-dialogue-project/) and  [Heterodox Academy Chapter at USC](https://heterodoxacademy.org/campuses/university-of-southern-california/)
+In addition to technical sessions, the symposium will include [Freedom, Courage, and Reform: The Future of the Scientific Enterprise Session](SSS), co-sponsored by  [USC Open Dialogue Project](https://usc.edu/open-dialogue-project/) and  [Heterodox Academy Chapter at USC](https://heterodoxacademy.org/campuses/university-of-southern-california/),
 focusing on issues of broader significance (academic freedom, viewpoint diversity, etc).
 
 The program will comprise invited talks, a poster session, and panel discussions. 
-The symposium will also honor [Prof. Anna Krylov](https://iopenshell.usc.edu/) on the 
+The symposium will honor [Prof. Anna Krylov](https://iopenshell.usc.edu/) on the 
 occasion of her 60th birthday.
 
 ```{figure} _static/images/aikwanted.jpg
@@ -45,8 +45,8 @@ occasion of her 60th birthday.
 
 #### Conference Organizers
 - Ksenia Bravaya, Boston University
-- Shirin Faraji, Heinrich Heine Universitat
-- Thomas Jagau, LU Leuven
+- Shirin Faraji, Heinrich Heine University Düsseldorf
+- Thomas Jagau, KU Leuven
 - Lyudmila Slipchenko, Purdue University
 - Hanna Reisler, USC
 

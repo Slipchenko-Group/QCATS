@@ -38,7 +38,7 @@
 
 * Technical talks
 * Lunch
-* [Science and society session](SSS)
+* [Freedom, Courage, and Reform: The Future of the Scientific Enterprise Session](SSS)
 * Reception
 * Dinner
 
@@ -53,9 +53,7 @@
 ## Detailed Schedule
 
 (SSS)=
-### Science and Society Section
-
-Session: **Freedom, Courage, and Reform: The Future of the Scientific Enterprise**  
+### Freedom, Courage, and Reform: The Future of the Scientific Enterprise Session
 Co-sponsored by [USC Open Dialogue Project](https://usc.edu/open-dialogue-project/) and  [Heterodox Academy Chapter at USC](https://heterodoxacademy.org/campuses/university-of-southern-california/)
 
 **Description**: 

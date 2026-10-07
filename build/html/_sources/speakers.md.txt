@@ -17,12 +17,12 @@ J. Chem. Theo. Comp.  18, 1748 – 1764 (2022) [link](https://iopenshell.usc.edu
 
 ## Invited Speakers
 - Atanu Acharya, Syracuse University
-- Maristella Alessio, KU Leuven
+- Maristella Alessio, TU Delft
 - Roi Baer, The Hebrew University of Jerusalem
 - Emily Carter, Princeton University
 - Jürgen Gauss, Johannes Gutenberg University Mainz
 - Peter Gill, Q-Chem, Inc.
-- Samer Gozem, Geordia State University
+- Samer Gozem, Georgia State University
 - Martin Head-Gordon, University of Calofornia, Berkeley
 - Anatoliy Kolomeisky, Rice University
 - Spiridoula Matsika, Temple University

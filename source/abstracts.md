@@ -1,7 +1,6 @@
 # Abstract Submission
 
-The abstract submission portal for oral contributions and poster 
-session **will open soon**.
+The abstract submission portal **will open soon**.
 
 :::{note}
 We welcome submissions reflecting themes relevant to Professor Anna Krylov's 
