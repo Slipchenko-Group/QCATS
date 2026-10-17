@@ -43,14 +43,17 @@ occasion of her 60th birthday.
 :alt: Anna Krylov
 ```
 
-#### Conference Organizers
+#### Organizers of the Scientific Conference
 - Ksenia Bravaya, Boston University
 - Shirin Faraji, Heinrich Heine University Düsseldorf
 - Thomas Jagau, KU Leuven
 - Lyudmila Slipchenko, Purdue University
 - Hanna Reisler, USC
 
-
+#### Organizers of [Freedom, Courage, and Reform: The Future of the Scientific Enterprise Session](SSS)
+- Neeraj Sood, USC
+- Margaret Crable, USC
+- Kami Akhavan, USC
 
 ```{toctree}
 :maxdepth: 1
