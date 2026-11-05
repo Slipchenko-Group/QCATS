@@ -2,6 +2,30 @@
 
 {{ super() }}
 
+{#- Page titles for browser tabs / search results:
+    home page gets a full descriptive title, other pages "<Page> | QCATS 2027". #}
+{%- block htmltitle %}
+{%- if pagename == master_doc %}
+  {%- set seo_title = seo_home_title %}
+{%- else %}
+  {%- set seo_title = (title|striptags if title else docstitle) ~ " | " ~ seo_site_title %}
+{%- endif %}
+  <title>{{ seo_title|e }}</title>
+  <meta property="og:title" content="{{ seo_title|e }}" />
+  <meta name="twitter:title" content="{{ seo_title|e }}" />
+{%- endblock htmltitle %}
+
+{#- Per-page description (set in conf.py: seo_descriptions) #}
+{%- block extrahead %}
+{%- set seo_desc = seo_descriptions.get(pagename, seo_descriptions["default"]) %}
+  <meta name="description" content="{{ seo_desc|e }}" />
+  <meta property="og:description" content="{{ seo_desc|e }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ pageurl|e }}" />
+  <meta property="og:site_name" content="{{ seo_site_title|e }}" />
+{{ super() }}
+{%- endblock extrahead %}
+
 {%- block main %}
 {%- if meta is defined and meta is not none and 'notoc' in meta %}
   <main class="relative py-6">

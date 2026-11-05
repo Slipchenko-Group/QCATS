@@ -23,6 +23,7 @@ extensions = [
     'sphinx_design',           # Enables responsive cards, tabs, and grids for speaker/schedule layouts
     'sphinxcontrib.bibtex',    # Optional: For managing a "Selected Publications" or tribute citation list
     'sphinx.ext.todo',
+    'sphinx_sitemap',          # Generates sitemap.xml for search engines (Google Search Console)
 ]
 
 # Configure MyST Parser to enable extra Markdown features (like tables, colon fences, etc.)
@@ -116,3 +117,34 @@ master_doc = 'index'
 # -- BibTeX Configuration (Optional) -----------------------------------------
 # Path to your bibliography file if displaying the scientist's papers
 bibtex_bibfiles = ['refs.bib']
+
+
+# -- Search engine (SEO) settings --------------------------------------------
+# sitemap.xml is built from html_baseurl; "{link}" gives clean URLs without a
+# language/version prefix.
+sitemap_url_scheme = "{link}"
+sitemap_excludes = ["search.html", "genindex.html"]
+
+# Title shown in browser tabs and Google results (see _templates/layout.html)
+seo_site_title = "QCATS 2027"
+seo_home_title = "QCATS 2027 | Symposium in Honor of Prof. Anna Krylov's 60th Birthday"
+
+# Short page summaries for Google results and link previews.
+# Keys are page names (file names without .md); "default" covers anything else.
+seo_descriptions = {
+    "default": "QCATS (Quantum Chemistry, Adventures, Trails & Science): a symposium in honor of Prof. Anna Krylov's 60th birthday, May 19-21, 2027, at USC, Los Angeles, CA.",
+    "index": "QCATS (Quantum Chemistry, Adventures, Trails & Science): a symposium in honor of Prof. Anna Krylov's 60th birthday, May 19-21, 2027, at USC, Los Angeles, CA.",
+    "schedule": "Program of the QCATS symposium honoring Prof. Anna Krylov, May 19-21, 2027, at USC: talks, poster session and panels.",
+    "speakers": "Speakers at QCATS 2027, the symposium celebrating Prof. Anna Krylov's 60th birthday and scientific legacy, USC, Los Angeles.",
+    "abstracts": "Abstract submission for QCATS 2027, the symposium in honor of Prof. Anna Krylov's 60th birthday, USC, May 19-21, 2027.",
+    "registration": "Registration for QCATS 2027, the symposium in honor of Prof. Anna Krylov's 60th birthday, USC, May 19-21, 2027.",
+    "logistics": "Venue, travel and lodging information for QCATS 2027 at the USC campus in Los Angeles, May 19-21, 2027.",
+    "gallery": "Photo gallery of QCATS 2027, the symposium in honor of Prof. Anna Krylov's 60th birthday.",
+    "sponsors": "Sponsors of QCATS 2027, the symposium in honor of Prof. Anna Krylov's 60th birthday at USC.",
+}
+
+html_context = {
+    "seo_site_title": seo_site_title,
+    "seo_home_title": seo_home_title,
+    "seo_descriptions": seo_descriptions,
+}
