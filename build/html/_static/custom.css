@@ -230,7 +230,7 @@ button[data-at-search="btn"],
 button[aria-label="Search"],
 button[aria-label="Open search"],
 .sphinxawesome-header button:has(.fa-search),
-header button:has(svg):not([aria-label*="theme"]):not([aria-label*="mode"]) {
+header button:has(svg):not([aria-label*="theme"]):not([aria-label*="mode"]):not(.md\:hidden) {
     display: none !important;
     visibility: hidden !important;
 }
@@ -384,4 +384,15 @@ figcaption, .caption {
     font-style: italic !important;
     margin-top: 0.8rem !important;
     text-align: left !important;
+}
+/* ==========================================================================
+   MOBILE MENU (HAMBURGER) BUTTON
+   Visible only below the md breakpoint; opens the left sidebar on phones.
+   ========================================================================== */
+header button.md\:hidden {
+    background-color: var(--primary-forest) !important;
+    border-radius: 6px !important;
+    width: 2.5rem !important;
+    padding: 0 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35) !important;
 }

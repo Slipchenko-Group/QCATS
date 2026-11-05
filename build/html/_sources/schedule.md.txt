@@ -67,7 +67,7 @@ This session will examine academic freedom from three complementary perspectives
   * Robert P. George (Princeton) 
   * Julia Schaletzky (UC Berkeley)
   * Evan Morris (Yale)
-  * TBD
+  * Sandeep Gupta (USC)
 
 ### Panel 2 — The Courage to Speak: Academic Freedom in Practice
 - **Moderator**: Lee Jussim (Rutgers)
